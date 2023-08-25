@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 public class Palindrome {
     /**
      * Palindromes are words that are the same forwards as they are backwards - eg, 'bob', 'racecar'.
@@ -12,6 +14,17 @@ public class Palindrome {
      * @return true if str is a palindrome, false otherwise.
      */
     public boolean pal(String str){
-        return false;
+
+        String reverse = "";
+        
+        for (int ctr = str.length() - 1; ctr >= 0; ctr--) {
+            reverse = reverse + str.charAt(ctr);
+        } 
+
+        if (str.equals(reverse)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
